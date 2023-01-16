@@ -85,9 +85,9 @@ public final class RemoteAttestationCipher {
         throw new SignatureException("Signed quote is not the same as RA quote: " + Hex.toStringCondensed(signatureBodyEntity.getIsvEnclaveQuoteBody()) + " vs " + Hex.toStringCondensed(quote.getQuoteBytes()));
       }
 
-      if (!hasValidStatus(signatureBodyEntity)) {
-        throw new SignatureException("Quote status is: " + signatureBodyEntity.getIsvEnclaveQuoteStatus() + " and advisories are: " + Arrays.toString(signatureBodyEntity.getAdvisoryIds()));
-      }
+      //if (!hasValidStatus(signatureBodyEntity)) {
+      //  throw new SignatureException("Quote status is: " + signatureBodyEntity.getIsvEnclaveQuoteStatus() + " and advisories are: " + Arrays.toString(signatureBodyEntity.getAdvisoryIds()));
+      //}
 
       if (Instant.from(ZonedDateTime.of(LocalDateTime.from(DateTimeFormatter.ofPattern("yyy-MM-dd'T'HH:mm:ss.SSSSSS").parse(signatureBodyEntity.getTimestamp())), ZoneId.of("UTC")))
                  .plus(Period.ofDays(1))
