@@ -22,7 +22,7 @@ plugins {
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
 }
 
-project.group = "com.github.ayavorskiy"
+project.group = "io.github.ayavorskiy"
 
 def getRepositoryUsername() {
     return hasProperty('whisperSonatypeUsername') ? whisperSonatypeUsername : ""
@@ -43,7 +43,7 @@ nexusPublishing {
 
 subprojects {
     ext.lib_signal_service_version_number = "2.15.3_unofficial_65"
-    ext.lib_signal_service_group_info     = "com.github.ayavorskiy"
+    ext.lib_signal_service_group_info     = "io.github.ayavorskiy"
 
     if (JavaVersion.current().isJava8Compatible()) {
         allprojects {
