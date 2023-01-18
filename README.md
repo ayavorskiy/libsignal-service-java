@@ -7,7 +7,6 @@ This fork allows using the Signal servers without GCM and provides provisioning,
 Use it at your own risk. OpenWhisperSystems is not responsible for this fork.
 
 Upstream development is now happening in the Signal-Android project: https://github.com/signalapp/Signal-Android/tree/master/libsignal/service
-The branch [upstream](https://github.com/Turasa/libsignal-service-java/tree/upstream) is tracking the signal-service lib changes from the Signal-Android project.
 
 # Legal things
 
